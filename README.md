@@ -2,7 +2,17 @@
 
 For this section of the assignment I designed a set of methods which could apply to both Question 3 and Question 4. In this section of the report I will describe the general process for designing these tools and what they do.
 
-## rlTools.simulate()
+## Getting Started
+
+1. Install numpy, matplotlib and opencv for python.
+2. Clone the repository.
+3. Run the example in rlTools.py
+
+To use the functions call import rlTools and make sure rlTools is in the working directory.
+
+## Functions
+
+### rlTools.simulate()
 
 ```python
 def simulate(
@@ -26,7 +36,7 @@ The function can also take in a already generated policy to either continue trai
 
 The method implements SARSA and greedy epsilon for training and a validation step. If all parameters alpha, gamma and epsilon are set to 0, The method utilises only the validation step to test the policy with no learning.
 
-## rlTools.runEpisode()
+### rlTools.runEpisode()
 
 ```python
 def runEpisode(
@@ -116,7 +126,7 @@ while not done and not trunc:
 
 Pixel data from the episode can also be extracted by setting the record flag true. Episode completion will return two extra values, A list of numpy arrays which represent the environment frame and a list of reward data for each frame of the simulation.
 
-## rlTools.mapState()
+### rlTools.mapState()
 
 ```python
 def mapState(state, states):
